@@ -23,7 +23,7 @@ void AudioPluginAudioProcessorEditor::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Isaac's plugin :)", getLocalBounds(), juce::Justification::centred, 1);
+    g.drawFittedText ("Isaac's plugin with different changes", getLocalBounds(), juce::Justification::centred, 1);
 }
 void AudioPluginAudioProcessorEditor::resized()
 {
