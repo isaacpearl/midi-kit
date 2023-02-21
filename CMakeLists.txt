@@ -77,6 +77,7 @@ set(
     PluginProcessor.h
     PluginEditor.cpp
     PluginProcessor.cpp
+    Components/MidiMessageDisplay.h
     )
 target_sources("${PROJECT_NAME}" PRIVATE ${SourceFiles})
 

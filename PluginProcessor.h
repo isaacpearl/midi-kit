@@ -1,5 +1,6 @@
 #pragma once
 
+#include <queue>
 #include <juce_audio_processors/juce_audio_processors.h>
 
 //==============================================================================
@@ -18,6 +19,7 @@ public:
 
     void processBlock (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
     using AudioProcessor::processBlock;
+    std::queue<juce::MidiMessageMetadata>* getMidiMessages();
 
     //==============================================================================
     juce::AudioProcessorEditor* createEditor() override;
@@ -45,4 +47,5 @@ public:
 private:
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessor)
+    std::queue< juce::MidiMessageMetadata > midiInputStack;
 };
